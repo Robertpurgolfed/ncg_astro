@@ -1,0 +1,57 @@
+---
+const underline = '/images/underline.svg'
+const imgOne = '/images/img_1.webp'
+const imgTwo = '/images/img_3.webp'
+const imgThree = '/images/img_5.webp'
+const imgFour = '/images/img_7.webp'
+const imgFive = '/images/img_8.webp'
+const imgSix = '/images/img_9.webp'
+const imgSeven = '/images/img_10.webp'
+---
+
+<link href='../../node_modules/pagedone/src/css/pagedone.css' rel='stylesheet' />
+<script src='../../node_modules/pagedone/src/js/pagedone.js'></script>
+<section id='gallery' class='section gallery'>
+	<div class='wrapper'>
+		<div class='heading'>
+			<h2 class='heading__text'>Galeria</h2>
+			<div class='heading__underline'><img src={underline} alt='' /></div>
+		</div>
+    <div class="columns-1 md:columns-2 xl:columns-3 gap-7 pt-8">
+      <div class=" break-inside-avoid mb-8">
+      <img class="h-auto max-w-full rounded-lg" src={imgOne} alt="Gallery image" />
+      </div>
+      <div class=" break-inside-avoid  mb-8">
+      <img class="h-auto max-w-full rounded-lg" src={imgTwo} alt="Gallery image" />
+      </div>
+      <div class=" break-inside-avoid  mb-8">
+      <img class="h-auto max-w-full rounded-lg" src={imgThree} alt="Gallery image" />
+      </div>
+      <div class=" break-inside-avoid  mb-8">
+      <img class="h-auto max-w-full rounded-lg" src={imgFour} alt="Gallery image" />
+      </div>
+      <div class=" break-inside-avoid  mb-8">
+      <img class="h-auto max-w-full rounded-lg" src={imgFive} alt="Gallery image" />
+      </div>
+      <div class=" break-inside-avoid  mb-8">
+      <img class="h-auto max-w-full rounded-lg" src={imgSix} alt="Gallery image" />
+      </div>
+      <div class=" break-inside-avoid  mb-8">
+      <img class="h-auto max-w-full rounded-lg" src={imgSeven} alt="Gallery image" />
+      </div>
+      </div>
+	</div>
+</section>
+
+<style lang='scss'>
+	@import '../styles/variables.scss';
+	.gallery {
+		.wrapper {
+			.heading__underline img {
+				margin: 0 auto;
+			}
+			
+		}
+	}
+</style>
+

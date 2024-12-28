@@ -1,0 +1,304 @@
+---
+const underline = "/images/underline.svg"
+const headingImg = "/images/img_12.webp"
+const headingImgS = "/images/img_44.webp"
+const icon1 = "/images/services_icon1.svg"
+const icon2 = "/images/services_icon2.svg"
+const icon3 = "/images/services_icon3.svg"
+const firstCardImg = "/images/img_6.webp"
+---
+<section id="services" class="section services">
+	<div class="wrapper">
+		<div class="heading">
+			<h2 class="heading__text">Oferta</h2>
+			<div class="heading__underline"><img src={underline} alt=""></div>
+		</div>
+		<div class="intro-box">
+			<p class="intro-box__heading">Skorzystaj z profesjonalnej pomocy przy zakupie samochodu!</p>
+			<p class="intro-box__description">Dzięki oględzinom auta unikniesz:</p>
+			<div class="card-box">
+				<div class="card-box__card">
+					<img src={icon1} alt="" class="icon">
+					<p class="text">Powypadkowego samochodu</p>
+				</div>
+				<div class="card-box__card">
+					<img src={icon2} alt="" class="icon">
+					<p class="text">Rozczarowania zakupem</p>
+				</div>
+				<div class="card-box__card">
+					<img src={icon3} alt="" class="icon">
+					<p class="text">Ciągłych wizyt u mechanika</p>
+				</div>
+			</div>
+			<p class="intro-box__description">Dodatkowo zaoszczędzisz czas i pieniądze (możliwe oględziny bez
+				klienta) - jedziesz na miejsce dopiero jeżeli auto jest warte zakupu. Po oględzinach znasz dokładne
+				koszty inwestycji po zakupie. Chcesz poznać szczegóły? Zapoznaj się z tym działem!</p>
+		</div>
+
+		<div class="items-box">
+			<picture>
+				<source srcset={headingImg} media="(min-width: 650px)">
+				<img src={headingImgS} alt="Inspekcja komory silnika Renault" class="items-box__img">
+			</picture>
+			<div class="items-box__text-box">
+				<p class="text">
+					Z pasją i wiedzą -<br>zapewniam kompleksową ocenę stanu samochodu przed zakupem
+				</p>
+			</div>
+		</div>
+		<p class="services-box title">Kompleksowe sprawdzenie samochodu przed zakupem i sprzedażą</p>
+		<div class="services-box">
+			<img src={firstCardImg} alt="" class="services-box__img">
+			<p class="services-box__description">Podczas oględzin sprawdzam następujące rzeczy:</p>
+			<ul>
+					<li>zewnętrzny stan pojazdu (oględziny wizualne)</li>
+					<li>pomiar grubości lakieru oraz kontrola miejsc, które mogą świadczyć o historii powypadkowej
+						pojazdu</li>
+					<li>opony i felgi</li>
+					<li>szyby</li>
+					<li>reflektory i lampy</li>
+					<li>stan hamulców (ocena wizualna)</li>
+					<li>komora silnika (wycieki, potencjalne uszkodzenia, stan olejów i płynów, paski napędowe,
+						akumulator)</li>
+					<li>pomiar ciśnienia sprężania (benzynowy) lub kontrola i sprawdzenie wtryskiwaczy paliwa (diesel)</li>
+					<li>wnętrze pojazdu</li>
+					<li>funkcjonowanie elementów wyposażenia</li>
+					<li>diagnostyka komputerowa testerem</li>
+					<li>kontrola rozruchu silnika i jego pracy na zimno</li>
+					<li>jazda próbna</li>
+					<li>inspekcja na stacji kontroli pojazdów (kontrola amortyzatorów, hamulców, zawieszenia,
+						toksyczności spalin, podwozia i oświetlenia)</li>
+					<li>diagnostyka komputerowa testerem po jeździe próbnej</li>
+				</ul>
+			</div>
+			<p class="services-box text">Podczas oględzin wykonuję zdjęcia samochodu i potencjalnych nieprawidłowości. Po oględzinach sporządzam raport, który zawiera również kosztorys inwestycji po zakupie. Oględziny mogą być wykonane z klientem lub bez jego obecności. Czas trwania oględzin to około 2.5 - 3 godziny.</p>		
+	</div>
+</section>
+<style lang="scss">
+	@import '../styles/variables.scss';
+	@font-face {
+  font-family: 'Overpass';
+  src: url('/fonts/Overpass-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Overpass';
+  src: url('/fonts/Overpass-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+	.services {
+		.wrapper {
+		.heading__underline img{
+			margin: 0 auto;
+		}
+		.intro-box {
+			margin-top: 4rem;
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			color: $white;
+			&__heading {
+				font-size: 2.4rem;
+				font-weight: bold;
+			}
+			&__description {
+				margin-top: 2rem;
+				font-size: 1.8rem;
+				font-weight: bold;
+			}
+			.card-box {
+				margin-top: 2rem;
+				display: flex;
+				flex-direction: column;
+				&__card {
+					.icon {
+						margin: 2rem auto;
+						height: 50px;
+					}
+					.text {
+						margin-top: 1rem;
+					}
+				}
+			}
+		}
+		.items-box {
+			position: relative;
+			margin-top: 4rem;
+			&__img {
+				height: 400px;
+				border-radius: 8px;
+			}
+			&__text-box {
+				position: absolute;
+				top: 10rem;
+				right: 0;
+				padding: 2rem 1rem;
+				border-radius: 8px;
+				width: 65vw;
+				background-color: rgba($main, 0.8);
+				.text {
+					font-family: 'Overpass', sans-serif;
+					font-size: 2rem;
+					font-weight: bold;
+				}
+			}
+		}
+		.services-box.title, .services-box.text{
+			color: $white;
+				font-weight: bold;
+		}
+		.services-box.title{
+			font-size: 2.4rem;
+		}
+		.services-box.text{
+			font-size: 1.6rem;
+		}
+		.services-box {
+			margin-top: 4rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 2rem;
+			&__description {
+				color: $white;
+				font-weight: bold;
+			}
+			ul{
+			list-style-type: disc;
+				padding-left: 20px;
+			}
+			ul li{
+				color: $white;
+				font-weight: bold;
+				margin-top: 5px;
+			}
+			&__img {
+				border-radius: 8px;
+				max-height: 500px;
+			}
+			&__description {
+				font-family: 'Overpass', sans-serif;
+				width: 100%;
+			}
+			&.mt {
+				margin-top: 3rem;
+			}
+		}
+	}
+}
+@media (min-width: 375px) {
+	.services {
+		.wrapper {
+			.items-box {
+				&__text-box {
+					padding: 3rem 2rem;
+					top: 8rem;
+					right: 2rem;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	.services {
+		.wrapper {
+			.intro-box {
+				&__heading {
+					font-size: 2.8rem;
+				}
+				&__description {
+					margin-top: 3rem;
+					font-size: 2rem;
+				}
+				.card-box {
+					flex-direction: row;
+					justify-content: space-around;
+					&__card {
+						.text {
+							font-size: 1.8rem;
+						}
+					}
+				}
+			}
+			.items-box {
+				&__img {
+				}
+				&__text-box {
+					padding: 5rem 3rem;
+					width: 50vw;
+					top: 50%;
+					transform: translate(0, -50%);
+					background-color: rgba($main, 0.9);
+					.text {
+						font-size: 2.4rem;
+					}
+				}
+			}
+			.services-box {
+				position: relative;
+				width: 100%;
+				margin-top: 3rem;
+				display: grid;
+grid-template-columns: repeat(2, auto);
+grid-template-rows: repeat(2, auto);
+grid-column-gap: 20px;
+					.services-box__img {
+						grid-area: 1 / 1 / 3 / 2;
+						width: 350px;
+					}
+					.services-box__description {
+						grid-area: 1 / 2 / 2 / 3;
+					}
+					ul{
+						grid-area: 2 / 2 / 3 / 3;
+					}
+				}
+				}
+				&__title {
+					position: absolute;
+					font-size: 2.8rem;
+					top: 0;
+				}
+				&__img {
+					width: 35vw;
+					order: 1;
+				}
+				&__description {
+					width: 30vw;
+					font-size: 2rem;
+					order: 2;
+				}
+			}
+		}
+@media (min-width: 992px) {
+	.services {
+		.wrapper {
+			.items-box {
+				&__text-box {
+					width: 40vw;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.services {
+		.wrapper {
+			.items-box {
+				&__text-box {
+					width: 30vw;
+					right: 10rem;
+					.text {
+						font-size: 3rem;
+					}
+				}
+			}
+		}
+	}
+}
+</style>

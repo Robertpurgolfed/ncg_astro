@@ -1,0 +1,100 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Home from "../components/Home.astro";
+import Services from "../components/Services.astro";
+import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
+import Gallery from "../components/Gallery.astro";
+import Footer from "../components/Footer.astro";
+---
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NieChceGrata</title>
+        <meta name="description" content="Sprawdzenie samochodu przed zakupem">
+        <meta name="keywords"
+            content="sprawdzenie techniczne samochodu Kraków, badanie techniczne pojazdu Małopolska, przegląd techniczny samochodu Kraków, usługi diagnostyki pojazdów Małopolskie, stan techniczny samochodu przed zakupem, ekspertyzy pojazdowe, raport przed zakupem samochodu, raport przed zakupem auta, badanie komputerowe samochodu Kraków, diagnostyka pojazdowa małopolskie, ocena techniczna pojazdu, raport z historii pojazdu Kraków, badanie silnika przed zakupem Kraków, usługi sprawdzenia stanu auta ">
+        <link rel="apple-touch-icon" sizes="180x180" href="../images/ncglogo.webp">
+        <link rel="icon" href="../images/ncglogo.webp">
+        <meta name="generator" content={Astro.generator} >
+      </head>
+	  <body>
+		  <Navigation />
+		  <Home />
+		  <Services />
+		  <About />
+		  <Gallery />
+		  <Contact />
+		  <Footer />
+  </body>
+</html>
+<style lang="scss" is:global>
+    @import '../styles/variables.scss';
+	*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	scroll-padding-top: 99px;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.6rem;
+	background-color: $bg;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+@media (min-width: 320px) {
+	section {
+		padding: 2rem 1rem;
+	}
+}
+@media (min-width: 375px) {
+	section {
+		padding: 2rem 2rem;
+	}
+}
+.heading {
+	text-align: center;
+	&__text {
+		font-size: 2.4rem;
+		color: $white;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 0.5rem;
+	}
+}
+@media (min-width: 992px) {
+	.heading {
+		&__text {
+			font-size: 2.8rem;
+		}
+	}
+}
+</style>

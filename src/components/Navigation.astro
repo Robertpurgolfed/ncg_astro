@@ -1,0 +1,276 @@
+---
+const logo = "/images/ncglogo.webp"
+const fbLogo = "/images/f_logo_RGB-Blue_58.png"
+const instaLogo = "/images/Instagram_Glyph_Gradient_RGB.png"
+---
+<nav class="nav">
+	<div class="nav__box">
+		<a href="#home" class="logo-link"><img src={logo} alt="Logo NieChceGrata"
+				class="logo-img"></a>
+		<button class="burger-btn">
+			<ul class="burger-btn__box">
+				<li class="burger-btn__box__element burger-btn__box__element--one"></li>
+				<li class="burger-btn__box__element burger-btn__box__element--two"></li>
+				<li class="burger-btn__box__element burger-btn__box__element--three"></li>
+				<li class="burger-btn__box__element burger-btn__box__element--four"></li>
+				<li class="burger-btn__box__element burger-btn__box__element--five"></li>
+				<li class="burger-btn__box__element burger-btn__box__element--six"></li>
+				<li class="burger-btn__box__element burger-btn__box__element--seven"></li>
+				<li class="burger-btn__box__element burger-btn__box__element--eight"></li>
+				<li class="burger-btn__box__element burger-btn__box__element--nine"></li>
+			</ul>
+		</button>
+		<div class="links-box">
+			<a href="#services" class="links-box__link" aria-label="Link prowadzi do sekcji usługi">Oferta</a>
+			<a href="#aboutme" class="links-box__link" aria-label="Link prowadzi do sekcji o mnie">O
+				mnie</a>
+			<a href="#gallery" class="links-box__link" aria-label="Link prowadzi do sekcji galeria">Galeria</a>
+			<a href="#contact" class="links-box__link" aria-label="Link prowadzi do sekcji kontakt">Kontakt</a>
+			<div class="social-box">
+				<a href="https://www.instagram.com/niechcegrata/"><img src={instaLogo} alt="Instagram logo"
+						class="social-box__item"></a>
+				<a href="https://www.facebook.com/NieChceGrata"><img src={fbLogo} alt="Facebook logo"
+					class="social-box__item"></a>
+			</div>
+		</div>
+	</div>
+</nav>
+<style lang="scss">
+	@import '../styles/variables.scss';
+	.nav {
+	position: fixed;
+	height: 8rem;
+	width: 90%;
+	margin-top: 2rem;
+	left: 50%;
+	transform: translate(-50%);
+	background-color: rgba($light-white, 0.8);
+	border-radius: 8px;
+	z-index: 100;
+	transition: border-radius 0.3s;
+	&.active {
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+	}
+	&__box {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 2rem;
+		.burger-btn {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	right: 2rem;
+	background: none;
+	border: none;
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		gap: 0.5rem;
+		width: 4rem;
+		height: 4rem;
+		padding: 0.2rem;
+		border-radius: 5px;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		&__element {
+			width: 0.7rem;
+			height: 0.7rem;
+			border-radius: 50%;
+			background-color: $black;
+			transition: transform 0.5s;
+		}
+
+		&.active {
+			.burger-btn__box__element {
+				&--two {
+					transform: translate(7px, -7px);
+				}
+				&--four {
+					transform: translate(7px, 7px);
+				}
+				&--six {
+					transform: translate(-7px, -7px);
+				}
+				&--eight {
+					transform: translate(-7px, 7px);
+				}
+			}
+		}
+	}
+}
+		.logo-link {
+			height: 85%;
+			.logo-img {
+				height: 100%;
+			}
+		}
+		.links-box {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			position: absolute;
+			height: 25rem;
+			width: 100%;
+			left: -400rem;
+			top: 8rem;
+			background-color: rgba($light-white, 0.8);
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+			transition: left 0.2s;
+			.social-box {
+				display: flex;
+				align-self: flex-end;
+				&__item {
+					height: 2.6rem;
+					margin: 1rem 2rem 0 0;
+				}
+			}
+			&__link {
+				text-transform: uppercase;
+				text-decoration: none;
+				margin-top: 2rem;
+				margin-right: 2.5rem;
+				font-size: 2rem;
+				font-weight: bold;
+				color: $black;
+				&.current {
+					color: $main;
+				}
+			}
+			&.opened {
+				left: 0;
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	.nav {
+		&__box {
+			.burger-btn {
+				display: none;
+			}
+			.logo-link {
+				margin-right: 2rem;
+			}
+			.links-box {
+				flex-direction: row;
+				justify-content: space-around;
+				height: 8rem;
+				align-items: center;
+				position: relative;
+				left: 0;
+				top: 0;
+				background: none;
+				.social-box {
+					align-self: center;
+					&__item {
+						margin-top: 0.2rem;
+					}
+					a:first-of-type {
+						.social-box__item {
+							margin-left: 2rem;
+						}
+					}
+					a:last-of-type {
+						.social-box__item {
+							margin-right: 0;
+						}
+					}
+				}
+				&__link {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 7rem;
+					width: 13rem;
+					font-size: 2.4rem;
+					border-radius: 8px;
+					text-align: center;
+					margin-top: 0;
+					margin-left: 0;
+					transition: background-color 0.3s;
+					&.current {
+						color: $black;
+						background-color: $main;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.nav {
+		width: 80%;
+		&__box {
+			.links-box {
+				&__link {
+					&.current {
+						background-color: $main;
+					}
+					&:hover {
+						background-color: $main;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.nav {
+		width: 60%;
+	}
+}
+</style>
+<script>
+const burgerBox = document.querySelector('.burger-btn__box')
+const linkBox = document.querySelector('.links-box')
+const nav = document.querySelector('.nav')
+const navLinks = document.querySelectorAll('.links-box__link')
+const lastSection = document.querySelector('.links-box__link:last-of-type')
+const navLogo = document.querySelector('.logo-link')
+const scrollSpySections = document.querySelectorAll('section')
+const handleNav = () => {
+	const closeNav = () => {
+		burgerBox.classList.remove('active')
+		linkBox.classList.remove('opened')
+		nav.classList.remove('active')
+	}
+	burgerBox.classList.toggle('active')
+	linkBox.classList.toggle('opened')
+	nav.classList.toggle('active')
+	navLinks.forEach(el => {
+		el.addEventListener('click', closeNav)
+	})
+	navLogo.addEventListener('click', closeNav)
+}
+const handleScrollSpy = () => {
+	const sections = []
+	if (window.innerWidth < 768) {
+	} else {
+		scrollSpySections.forEach(section => {
+			if (window.scrollY <= section.offsetTop + section.offsetHeight - 100) {
+				sections.push(section)
+				const activeSection = document.querySelector(`[href*="${sections[0].id}"]`)
+				navLinks.forEach(item => item.classList.remove('current'))
+				activeSection.classList.add('current')
+			}
+			if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 20) {
+				navLinks.forEach(item => item.classList.remove('current'))
+				lastSection.classList.add('current')
+			}
+		})
+	}
+}
+burgerBox.addEventListener('touchstart', handleNav)
+window.addEventListener('scroll', handleScrollSpy)
+</script>

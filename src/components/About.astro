@@ -1,0 +1,116 @@
+---
+const underline = "/images/underline.svg"
+const fbLogo = "/images/f_logo_RGB-Blue_58.png"
+const instaLogo = "/images/Instagram_Glyph_Gradient_RGB.png"
+const aboutImg = "/images/img_11.webp"
+---
+<section id="aboutme" class="section aboutme">
+<div class="wrapper">
+	<div class="heading">
+		<h2 class="heading__text">O mnie</h2>
+		<div class="heading__underline"><img src={underline} alt=""></div>
+	</div>
+	<div class="items-box">
+		<img src={aboutImg} alt="Warsztat samochodowy, czerwony samochód na podnośniku"
+			class="items-box__img">
+		<p class="text">Mam na imię Michał i jestem właścicielem firmy NieChceGrata.
+			Moją pasją i hobby odkąd pamiętam jest motoryzacja oraz "dłubanie" przy samochodach.
+
+			Posiadam ponad 15 letnie doświadczenie w branży motoryzacyjnej.
+			Jestem absolwentem Wydziału Mechanicznego Politechniki Krakowskiej.
+			Jeszcze będąc na studiach założyłem swój warsztat samochodowy, który prowadzę do dziś.
+			Po ukończeniu studiów pracowałem w autoryzowanych serwisach samochodów jako doradca serwisowy.
+			W późniejszym etapie przez prawie 10 lat pracowałem jako konstruktor w branży kolejowej i
+			motoryzacyjnej, dzięki czemu nabyłem dużą wiedzę i doświadczenie w tym jak zbudowane są
+			współczesne samochody.
+
+			Moje podejście do tematu jest wyjątkowe - nie nastawione tylko i wyłącznie na zysk.
+			Oględziny samochodów i ich serwis wykonuję tak jak gdybym wykonywał je dla siebie.
+			Cenię uczciwość i rzetelność, a swoją pracę traktuję jak pewnego rodzaju misję - demaskować
+			nieuczciwe praktyki, którymi niestety branża motoryzacyjna jest skażona.
+
+			"NieChceGrata" powstało w 2020 roku, kiedy postanowiłem zakończyć pracę jako konstruktor i zająć
+			się oględzinami oraz warsztatem "na pełen etat" :)</p>
+		<div class="social">
+			<a href="https://www.instagram.com/niechcegrata/"><img src={instaLogo} alt="Instagram logo"
+					class="social-item"></a>
+			<a href="https://www.facebook.com/NieChceGrata"><img src={fbLogo} alt="Facebook logo" class="social-item"></a>
+		</div>
+	</div>
+</div>
+</section>
+<style lang="scss">
+	@import '../styles/variables.scss';
+.aboutme {
+	.wrapper {
+		.heading__underline img{
+			margin: 0 auto;
+		}
+		.items-box {
+			&__img {
+				display: block;
+				margin: 0 auto 20px auto;
+				width: 100%;
+				border-radius: 8px;
+			}
+			margin: 40px auto 0 auto;
+			padding: 2rem;
+			background-color: rgba($main, 0.8);
+			font-family: 'Overpass', sans-serif;
+			font-weight: bold;
+			border-radius: 23px;
+			.social {
+				position: relative;
+				left: 50%;
+				transform: translate(-50%);
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				margin-top: 2rem;
+				height: 4rem;
+				width: 10rem;
+				border-radius: 20px;
+				background-color: $bg;
+				&-item {
+					display: block;
+					height: 2.5rem;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 700px) {
+	.aboutme {
+		.wrapper {
+			.items-box {
+				background-color: rgba($main, 0.9);
+				font-size: 1.8rem;
+				.social {
+					height: 5rem;
+					width: 11rem;
+					&-item {
+						height: 3rem;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.aboutme {
+		.wrapper {
+			.items-box {
+				padding: 3rem;
+				font-size: 2rem;
+				width: 80%;
+				&__img {
+					width: 70%;
+				}
+				.social {
+					width: 12rem;
+				}
+			}
+		}
+	}
+}
+</style>

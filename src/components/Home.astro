@@ -1,0 +1,145 @@
+<section id="home" class="section home">
+    <div class="shadow"></div>
+    <div class="cover">
+        <div>
+            <p class="header header--upper">NieChce</p>
+            <p class="header">Grata</p>
+        </div>
+        <h1 class="description">Sprawdzenie samochodu<br>przed zakupem</h1>
+        <div class="buttons">
+            <a href="#contact" class="cta">Skontaktuj się!</a>
+            <a href="#services" class="scroll">Dowiedz się więcej</a>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+	@import '../styles/variables.scss';
+.home {
+	position: relative;
+	height: 100dvh;
+	background-image: url("/images/header_small.webp");
+	background-size: cover;
+	padding: 0;
+	.cover {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: 45svh;
+		width: 100%;
+		padding-bottom: 3rem;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: rgba($main, 0.75);
+		z-index: 10;
+			.header {
+				position: relative;
+				display: inline;
+				font-size: 4.5rem;
+				font-weight: bold;
+				&--upper {
+					color: $white;
+					top: -2.5rem;
+				}
+			}
+		.description {
+			text-align: center;
+			font-size: 2.4rem;
+			font-weight: bold;
+			color: $white;
+		}
+		.buttons {
+			text-align: center;
+			.cta,
+			.scroll {
+				text-decoration: none;
+				font-size: 1.8rem;
+				font-weight: bold;
+			}
+			.cta {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 17rem;
+				height: 5rem;
+				border-radius: 2rem;
+				margin-bottom: 2rem;
+				background-color: $black;
+				color: $white;
+			}
+			.scroll {
+				display: inline-block;
+				color: $black;
+			}
+			.cta:hover, .scroll:hover{
+					transform: scale(1.05);
+					transition: linear, 0.3s;
+		
+		}
+	}
+}}
+@media (min-width: 768px) {
+	.home {
+		background-image: url("/images/header_med.webp");
+		.cover {
+			height: 45svh;
+				.header {
+					font-size: 6rem;
+					&--upper {
+						top: -3.5rem;
+					}
+				}
+			.description {
+				font-size: 3rem;
+			}
+			.buttons {
+				.cta,
+				.scroll {
+					font-size: 2rem;
+				}
+				.cta {
+					width: 20rem;
+					margin-bottom: 3rem;
+				}
+				.scroll {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.home {
+		background-image: url("/images/header_large.webp");
+		background-position: 50% 50%;
+		.cover {
+			height: 50svh;
+				.header {
+					font-size: 8rem;
+					&--upper {
+						top: -5rem;
+					}
+				}
+			
+			.description {
+				font-size: 4rem;
+			}
+			.buttons {
+				.cta,
+				.scroll {
+					font-size: 2rem;
+				}
+				.cta {
+					height: 5rem;
+				}
+				.scroll {
+					padding: 1rem;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+</style>

@@ -1,0 +1,186 @@
+---
+const underline = "/images/underline.svg"
+const iconPin = "/images/maps-pin-black-icon.svg"
+const iconPhone = "/images/mobile-phone-shake-icon.svg"
+const iconMail = "/images/paper-plane-icon.svg"
+const fbLogo = "/images/f_logo_RGB-Blue_58.png"
+const instaLogo = "/images/Instagram_Glyph_Gradient_RGB.png"
+const ytLogo = "/images/yt_logo_rgb_dark.png"
+---
+<section id="contact" class="section contact">
+	<div class="wrapper">
+		<div class="heading">
+			<h2 class="heading__text">Kontakt</h2>
+			<div class="heading__underline"><img src={underline} alt=""></div>
+		</div>
+		<div class="items-box">
+			<div class="items-box__item">
+				<img src={iconPin} alt="" class="icon">
+				<p class="info">Kraków i okolice, małopolskie, śląskie, świętokrzyskie oraz podkarpackie (możliwa
+					cała Polska)</p>
+			</div>
+			<div class="items-box__item">
+				<img src={iconPhone} alt="" class="icon">
+				<a href="tel:+48606342613" class="info info-link">606 342 613</a>
+			</div>
+			<div class="items-box__item">
+				<img src={iconMail} alt="" class="icon">
+				<a href="mailto:niechcegrata@gmail.com" class="info info-link">niechcegrata@gmail.com</a>
+			</div>
+			<div class="social">
+				<a href="https://www.instagram.com/niechcegrata/"><img src={instaLogo} alt="Logo Instagram"
+						class="social-item"></a>
+				<a href="https://www.facebook.com/NieChceGrata"><img src={fbLogo} alt="Logo Facebook" class="social-item"></a>
+			</div>
+			<a href="https://www.youtube.com/@niechcegrata"><img src={ytLogo} alt="Logo Youtube" class="yt-icon"></a>
+		</div>
+	</div>
+</section>
+<style lang="scss">
+	@import '../styles/variables.scss';
+.contact {
+	display: flex;
+	background-image: url('/images/rect_mobile.svg');
+	background-size: cover;
+	background-position: 0 60%;
+	padding: 4rem 1rem;
+	.wrapper {
+		.heading__underline img {
+				margin: 0 auto;
+			}
+		.items-box {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 2rem;
+			margin: 8rem 0;
+			&__item {
+				display: flex;
+				align-items: center;
+				width: 90%;
+				.icon {
+					height: 3rem;
+					width: 3rem;
+				}
+				.info {
+					display: inline;
+					color: $white;
+					margin-left: 2rem;
+					font-weight: bold;
+					&-link {
+						text-decoration: none;
+					}
+				}
+			}
+			.social {
+				display: flex;
+				justify-content: space-around;
+				width: 30%;
+				margin-top: 2rem;
+				&-item {
+					width: 3rem;
+				}
+			}
+			.yt-icon {
+				margin: 0 auto;
+				width: 30%;
+			}
+		}
+	}
+}
+@media (min-width: 375px) {
+	.contact {
+		padding: 4rem 2rem;
+		background-position: 0 50%;
+		.wrapper {
+			.items-box {
+				gap: 4rem;
+				.info {
+					font-size: 1.8rem;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 500px) {
+	.contact {
+		.wrapper {
+			.items-box {
+				&__item {
+					width: 50%;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 768px) {
+	.contact {
+		background-image: url('/images/rect_tab.svg');
+		background-position: 0 60%;
+		.wrapper {
+			.items-box {
+				gap: 4rem;
+				&__item {
+					width: 55%;
+					.icon {
+						width: 4rem;
+						height: 4rem;
+					}
+					.info {
+						font-size: 2.2rem;
+					}
+				}
+				.social {
+					width: 20%;
+					&-item {
+						width: 4rem;
+					}
+				}
+				.yt-icon {
+					width: 20%;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 992px) {
+	.contact {
+		background-image: url('/images/rect_desktop.svg');
+		.wrapper {
+			.items-box {
+				&__item {
+					width: 33%;
+					.icon {
+						width: 4rem;
+						height: 4rem;
+					}
+				}
+				.social {
+					width: 15%;
+					&-item {
+						width: 4rem;
+					}
+				}
+				.yt-icon {
+					width: 15%;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.contact {
+		.wrapper {
+			.items-box {
+				.social {
+					width: 10%;
+				}
+				.yt-icon {
+					width: 10%;
+				}
+			}
+		}
+	}
+}
+
+</style>

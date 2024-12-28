@@ -1,0 +1,33 @@
+<footer class="footer">
+    <p class="footer__text">
+        <span class="footer__date"></span>|
+        © NieChceGrata
+    </p>
+</footer>
+<style lang="scss">
+    @import '../styles/variables.scss';
+.footer {
+	width: 100%;
+	height: 8rem;
+	background-color: $main;
+	&__text {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $black;
+		font-weight: bold;
+		white-space: nowrap;
+	}
+	&__date {
+		margin-right: 1rem;
+	}
+}
+</style>
+<script>
+	const footerDate = document.querySelector('.footer__date')
+	window.addEventListener('DOMContentLoaded', function () {
+	const date = new Date()
+	footerDate.textContent = `${date.getFullYear()}`
+})
+</script>
