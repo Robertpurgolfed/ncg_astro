@@ -2,6 +2,7 @@
 const underline = "/images/underline.svg"
 const fbLogo = "/images/f_logo_RGB-Blue_58.png"
 const instaLogo = "/images/Instagram_Glyph_Gradient_RGB.png"
+const ytLogo = "/images/yt_logo_rgb_dark.png"
 const aboutImg = "/images/img_11.webp"
 ---
 <section id="aboutme" class="section aboutme">
@@ -32,6 +33,8 @@ const aboutImg = "/images/img_11.webp"
 			"NieChceGrata" powstało w 2020 roku, kiedy postanowiłem zakończyć pracę jako konstruktor i zająć
 			się oględzinami oraz warsztatem "na pełen etat" :)</p>
 		<div class="social">
+			<a href="https://www.youtube.com/@niechcegrata"><img src={ytLogo} alt="Youtube logo"
+					class="social-item"></a>
 			<a href="https://www.instagram.com/niechcegrata/"><img src={instaLogo} alt="Instagram logo"
 					class="social-item"></a>
 			<a href="https://www.facebook.com/NieChceGrata"><img src={fbLogo} alt="Facebook logo" class="social-item"></a>
@@ -68,7 +71,7 @@ const aboutImg = "/images/img_11.webp"
 				align-items: center;
 				margin-top: 2rem;
 				height: 4rem;
-				width: 10rem;
+				width: 16rem;
 				border-radius: 20px;
 				background-color: $bg;
 				&-item {
@@ -87,7 +90,6 @@ const aboutImg = "/images/img_11.webp"
 				font-size: 1.8rem;
 				.social {
 					height: 5rem;
-					width: 11rem;
 					&-item {
 						height: 3rem;
 					}
@@ -105,9 +107,6 @@ const aboutImg = "/images/img_11.webp"
 				width: 80%;
 				&__img {
 					width: 70%;
-				}
-				.social {
-					width: 12rem;
 				}
 			}
 		}

@@ -2,6 +2,7 @@
 const logo = "/images/ncglogo.webp"
 const fbLogo = "/images/f_logo_RGB-Blue_58.png"
 const instaLogo = "/images/Instagram_Glyph_Gradient_RGB.png"
+const ytLogo = "/images/yt_logo_rgb_dark.png"
 ---
 <nav class="nav">
 	<div class="nav__box">
@@ -27,6 +28,8 @@ const instaLogo = "/images/Instagram_Glyph_Gradient_RGB.png"
 			<a href="#gallery" class="links-box__link" aria-label="Link prowadzi do sekcji galeria">Galeria</a>
 			<a href="#contact" class="links-box__link" aria-label="Link prowadzi do sekcji kontakt">Kontakt</a>
 			<div class="social-box">
+				<a href="https://www.youtube.com/@niechcegrata"><img src={ytLogo} alt="Youtube logo"
+						class="social-box__item"></a>
 				<a href="https://www.instagram.com/niechcegrata/"><img src={instaLogo} alt="Instagram logo"
 						class="social-box__item"></a>
 				<a href="https://www.facebook.com/NieChceGrata"><img src={fbLogo} alt="Facebook logo"
@@ -109,9 +112,8 @@ const instaLogo = "/images/Instagram_Glyph_Gradient_RGB.png"
 	}
 }
 		.logo-link {
-			height: 85%;
 			.logo-img {
-				height: 100%;
+				width: 75px;
 			}
 		}
 		.links-box {
@@ -153,7 +155,7 @@ const instaLogo = "/images/Instagram_Glyph_Gradient_RGB.png"
 		}
 	}
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	.nav {
 		&__box {
 			.burger-btn {
@@ -203,21 +205,7 @@ const instaLogo = "/images/Instagram_Glyph_Gradient_RGB.png"
 						color: $black;
 						background-color: $main;
 					}
-				}
-			}
-		}
-	}
-}
-@media (min-width: 992px) {
-	.nav {
-		width: 80%;
-		&__box {
-			.links-box {
-				&__link {
-					&.current {
-						background-color: $main;
-					}
-					&:hover {
+					&:hover{
 						background-color: $main;
 					}
 				}
@@ -227,7 +215,7 @@ const instaLogo = "/images/Instagram_Glyph_Gradient_RGB.png"
 }
 @media (min-width: 1200px) {
 	.nav {
-		width: 60%;
+		width: 75%;
 	}
 }
 </style>
